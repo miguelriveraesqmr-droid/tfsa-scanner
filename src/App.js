@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
 const PORTFOLIO = [
   { ticker: "VFV", name: "Vanguard S&P 500", currency: "CAD", value: 3549 },
@@ -318,7 +318,6 @@ function OpportunityCard({ item, expanded, onToggle }) {
 }
 
 function PortfolioRow({ item }) {
-  const pct = ((item.value - (item.value / (1 + (Math.random() * 0.4 - 0.2)))) / item.value * 100).toFixed(1);
   return (
     <div style={{
       display: "flex", justifyContent: "space-between",
